@@ -2,6 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+
+This app is uploading png/csv files and parse the data to store it on localStorage.
+The PNG files are available under "/images" page as a gallery and CSV files are under "/sheets" page as a table.
+
+## Quick run
+
+Clone or download the repository and after that in the project directory install all the dependencies with:
+
+### `npm install`
+
 ## Available Scripts
 
 In the project directory, you can run:
