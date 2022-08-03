@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #61dafb;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #03607a;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 90%;
+  margin: 20px auto;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 4px 10px;
+}
+
+.upload-button {
+  color: black;
+  background-color: #61dafb;
+  cursor: pointer;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.upload-button:hover {
+  color: white;
+  background-color: #03607a;
+}
+.upload-button:disabled {
+  opacity: 0.4;
+}
+.upload-button:disabled:hover {
+  color: black;
+  background-color: #61dafb;
+  cursor: not-allowed;
+}
+.upload-error {
+  color: red;
+  padding: 20px;
+}
+
+.upload-message {
+  color: green;
+  padding: 20px;
+}
+.upload-input {
+  padding: 0 20px 20px 20px;
+}
