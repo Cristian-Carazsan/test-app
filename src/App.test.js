@@ -1,8 +1,18 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders upload file button", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const buttonElement = screen.getByText(/upload file/i);
+  expect(buttonElement).toBeInTheDocument();
+});
+
+test("renders menu links", () => {
+  render(<App />);
+  const homeLink = screen.getByText(/Home/i);
+  expect(homeLink).toBeInTheDocument();
+  const imagesLink = screen.getByText(/Images/i);
+  expect(imagesLink).toBeInTheDocument();
+  const sheetsLink = screen.getByText(/Sheets/i);
+  expect(sheetsLink).toBeInTheDocument();
 });
