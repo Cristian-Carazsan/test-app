@@ -68,7 +68,6 @@ function Home() {
       if (parsedData.length) {
         const columnNames = Object.keys(parsedData[0]);
 
-        console.log(parsedData);
         if (
           columnNames.length !== 1 ||
           !(columnNames[0] !== "total" || columnNames[0] !== "Total")
@@ -138,16 +137,30 @@ function Home() {
     <div className="App">
       <h2>Upload a file</h2>
       <h4>*Only PNG and CSV formats are allowed</h4>
-      {error ? <div className="upload-error">{error}</div> : null}
-      {message ? <div className="upload-message">{message}</div> : null}
+      {error ? (
+        <div data-testid="upload-error" className="upload-error">
+          {error}
+        </div>
+      ) : null}
+      {message ? (
+        <div data-testid="upload-message" className="upload-message">
+          {message}
+        </div>
+      ) : null}
       <input
         className="upload-input"
+        data-testid="upload-input"
         ref={inputEl}
         type="file"
         onChange={handleChange}
         multiple={false}
       />
-      <button className="upload-button" disabled={!file} onClick={handleUpload}>
+      <button
+        data-testid="upload-button"
+        className="upload-button"
+        disabled={!file}
+        onClick={handleUpload}
+      >
         Upload File
       </button>
     </div>
